@@ -11,7 +11,7 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {% for cat in component.categories %}
-                    <a href="{{ cat.url }}" class="anaqa-category-card">
+                    <a href="{{ cat.url }}" class="anaqa-category-card group">
                         <img src="{{ cat.image ?: theme.settings.get('placeholder') }}" alt="{{ cat.name }}" loading="lazy">
                         <div class="anaqa-category-card-overlay">
                             <span class="anaqa-category-card-title">{{ cat.name }}</span>

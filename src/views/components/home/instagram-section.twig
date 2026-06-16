@@ -12,9 +12,9 @@
         <div class="anaqa-instagram-grid">
             {% for item in component.images %}
                 {% if item.link %}
-                    <a href="{{ item.link }}" target="_blank" rel="noopener" class="anaqa-instagram-item">
+                    <a href="{{ item.link }}" target="_blank" rel="noopener" class="anaqa-instagram-item group">
                 {% else %}
-                    <div class="anaqa-instagram-item">
+                    <div class="anaqa-instagram-item group">
                 {% endif %}
                     <img src="{{ item.image }}" alt="Instagram" loading="lazy">
                     <div class="anaqa-instagram-overlay">

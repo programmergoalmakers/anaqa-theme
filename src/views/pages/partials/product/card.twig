@@ -2,7 +2,7 @@
   Product Card Partial
   Expects: product (object)
 #}
-<div class="anaqa-product-card">
+<div class="anaqa-product-card group">
     <div class="anaqa-product-card-image">
         <a href="{{ product.url }}">
             <img src="{{ product.images[0] ?: theme.settings.get('placeholder') }}" alt="{{ product.name }}" loading="lazy">

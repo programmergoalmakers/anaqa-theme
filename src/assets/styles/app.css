@@ -129,7 +129,7 @@ body {
 }
 
 .anaqa-product-card {
-    @apply group bg-white overflow-hidden transition-all duration-300;
+    @apply bg-white overflow-hidden transition-all duration-300;
     box-shadow: 0 2px 20px rgba(0,0,0,0.04);
 }
 
@@ -197,7 +197,7 @@ body {
 }
 
 .anaqa-category-card {
-    @apply relative overflow-hidden group cursor-pointer;
+    @apply relative overflow-hidden cursor-pointer;
 }
 
 .anaqa-category-card img {
@@ -278,7 +278,7 @@ body {
 }
 
 .anaqa-instagram-item {
-    @apply relative overflow-hidden aspect-square group cursor-pointer;
+    @apply relative overflow-hidden aspect-square cursor-pointer;
 }
 
 .anaqa-instagram-item img {
@@ -396,7 +396,7 @@ body {
 }
 
 .anaqa-product-description {
-    @apply prose prose-sm max-w-none;
+    @apply text-sm leading-relaxed text-gray-700 max-w-none;
 }
 
 .anaqa-mobile-header {
