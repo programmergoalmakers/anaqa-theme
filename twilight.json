@@ -7,7 +7,7 @@
         "ar": "متجر أزياء عصري وأنيق - قالب أناقة للأزياء والموضة",
         "en": "Modern & elegant fashion ecommerce theme - Anaqa for fashion & clothing stores"
     },
-    "repository": "https://github.com/mahmoudhassanx174/anaqa-theme",
+    "repository": "https://github.com/programmergoalmakers/anaqa-theme",
     "author_email": "mahmoudhassanx174@gmail.com",
     "features": [
         "mega-menu",
@@ -25,7 +25,6 @@
         "component-square-photos",
         "component-store-features",
         "component-youtube",
-        "component-latest-products",
         "menu-images",
         "filters"
     ],
@@ -304,7 +303,6 @@
     ],
     "components": [
         {
-            "key": "anaqa-hero",
             "title": {
                 "en": "Fashion Hero Banner",
                 "ar": "بانر رئيسي للأزياء"
@@ -355,10 +353,26 @@
                     "format": "variable-list",
                     "source": "custom",
                     "sources": [
-                        {"label": "منتجات", "key": "products", "value": "products"},
-                        {"label": "تصنيف", "key": "categories", "value": "categories"},
-                        {"label": "تخفيضات", "key": "offers_link", "value": "offers_link"},
-                        {"label": "رابط خارجي", "key": "custom", "value": "custom"}
+                        {
+                            "label": "منتجات",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "تخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
                     ]
                 },
                 {
@@ -376,17 +390,35 @@
                     "label": "محاذاة النص",
                     "id": "alignment",
                     "format": "dropdown-list",
-                    "selected": [{"label": "اليمين", "value": "right", "key": "right"}],
+                    "selected": [
+                        {
+                            "label": "اليمين",
+                            "value": "right",
+                            "key": "right"
+                        }
+                    ],
                     "options": [
-                        {"label": "اليمين", "value": "right", "key": "right"},
-                        {"label": "الوسط", "value": "center", "key": "center"},
-                        {"label": "اليسار", "value": "left", "key": "left"}
+                        {
+                            "label": "اليمين",
+                            "value": "right",
+                            "key": "right"
+                        },
+                        {
+                            "label": "الوسط",
+                            "value": "center",
+                            "key": "center"
+                        },
+                        {
+                            "label": "اليسار",
+                            "value": "left",
+                            "key": "left"
+                        }
                     ]
                 }
-            ]
+            ],
+            "name": "anaqa-hero"
         },
         {
-            "key": "anaqa-categories",
             "title": {
                 "en": "Fashion Categories",
                 "ar": "تصنيفات الأزياء"
@@ -416,10 +448,10 @@
                     "searchable": true,
                     "required": true
                 }
-            ]
+            ],
+            "name": "anaqa-categories"
         },
         {
-            "key": "anaqa-benefits",
             "title": {
                 "en": "Store Benefits",
                 "ar": "مميزات المتجر"
@@ -478,10 +510,10 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "name": "anaqa-benefits"
         },
         {
-            "key": "anaqa-instagram",
             "title": {
                 "en": "Instagram / Lifestyle",
                 "ar": "قسم إنستغرام"
@@ -523,10 +555,10 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "name": "anaqa-instagram"
         },
         {
-            "key": "anaqa-newsletter",
             "title": {
                 "en": "Newsletter / CTA Section",
                 "ar": "قسم النشرة البريدية"
@@ -561,7 +593,9 @@
                     "value": "اشتراك",
                     "format": "text"
                 }
-            ]
+            ],
+            "name": "anaqa-newsletter"
         }
-    ]
+    ],
+    "support_url": "https://github.com/programmergoalmakers/anaqa-theme/issues"
 }
