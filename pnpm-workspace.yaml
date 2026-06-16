@@ -1,0 +1,10 @@
+allowBuilds:
+  '@parcel/watcher': true
+  bufferutil: true
+  es5-ext: true
+  utf-8-validate: true
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - bufferutil
+  - es5-ext
+  - utf-8-validate

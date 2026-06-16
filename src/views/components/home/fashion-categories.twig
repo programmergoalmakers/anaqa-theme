@@ -1,0 +1,24 @@
+{#
+  Fashion Categories Component
+  Fields: title, categories (multi-select from Salla categories)
+#}
+{% set title = component.title ?: 'shop_by_category' | t %}
+{% if component.categories is not empty %}
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="anaqa-section-title">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {% for cat in component.categories %}
+                    <a href="{{ cat.url }}" class="anaqa-category-card">
+                        <img src="{{ cat.image ?: theme.settings.get('placeholder') }}" alt="{{ cat.name }}" loading="lazy">
+                        <div class="anaqa-category-card-overlay">
+                            <span class="anaqa-category-card-title">{{ cat.name }}</span>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}

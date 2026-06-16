@@ -1,0 +1,23 @@
+{#
+  Store Benefits Component
+  Fields: benefits (collection of icon, title, description)
+#}
+{% if component.benefits is not empty %}
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="anaqa-benefits-grid">
+                {% for benefit in component.benefits %}
+                    <div class="anaqa-benefit-item">
+                        {% if benefit.icon %}
+                            <div class="benefit-icon">
+                                <span class="{{ benefit.icon }} text-3xl"></span>
+                            </div>
+                        {% endif %}
+                        <h4>{{ benefit.title }}</h4>
+                        <p>{{ benefit.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}

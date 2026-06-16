@@ -1,0 +1,34 @@
+{#
+  Hero Banner Component
+  Fields: background, title, subtitle, button_text, button_link, show_text, alignment
+#}
+{% if component.background %}
+    <section class="anaqa-hero {{ theme.settings.get('hero_image') ? '' : '' }}">
+        <img src="{{ component.background }}" alt="{{ component.title ?: 'hero_title' | t }}" loading="eager">
+        {% if component.show_text != false %}
+            {% set align = component.alignment ?: 'right' %}
+            {% set alignClass = align == 'center' ? 'center' : (align == 'left' and not theme.is_rtl ? 'ltr' : '') %}
+            <div class="anaqa-hero-overlay {{ alignClass }}">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-lg {{ align == 'center' ? 'mx-auto text-center' : (align == 'left' ? (theme.is_rtl ? 'mr-auto' : 'ml-auto text-right') : '') }}">
+                        {% if component.title %}
+                            <h1 class="text-3xl md:text-5xl font-light text-white mb-4 leading-tight">
+                                {{ component.title }}
+                            </h1>
+                        {% endif %}
+                        {% if component.subtitle %}
+                            <p class="text-white/80 text-sm md:text-base mb-8 max-w-md {{ align == 'center' ? 'mx-auto' : '' }}">
+                                {{ component.subtitle }}
+                            </p>
+                        {% endif %}
+                        {% if component.button_text %}
+                            <a href="{{ component.button_link ?: store.url ~ '/products' }}" class="anaqa-btn-accent">
+                                {{ component.button_text }}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+{% endif %}

@@ -1,0 +1,54 @@
+{#
+  Product Index (Category/Collection) Page
+  Variables: products (array), category (object), page (object)
+#}
+{% extends "layouts.master" %}
+
+{% block content %}
+    <div class="container mx-auto px-4 py-6 md:py-10">
+        {% if theme.settings.get('product_index_show_breadcrumbs', true) %}
+            <div class="anaqa-breadcrumb">
+                <a href="{{ store.url }}">{{ 'home' | t }}</a>
+                <span>/</span>
+                <span class="text-gray-700">{{ page.title | raw }}</span>
+            </div>
+        {% endif %}
+
+        <div class="mb-8">
+            <h1 class="text-2xl md:text-3xl font-light">{{ page.title | raw }}</h1>
+            {% if category and category.description %}
+                <p class="text-sm text-gray-500 mt-2">{{ category.description }}</p>
+            {% endif %}
+        </div>
+
+        <div class="flex gap-4 mb-8">
+            <select class="text-sm border border-gray-200 px-4 py-2 bg-white" onchange="window.location = this.value">
+                <option value="">{{ 'sort_by' | t }}</option>
+                <option value="{{ store.url }}/products?sort=latest">{{ 'new_arrivals' | t }}</option>
+                <option value="{{ store.url }}/products?sort=price_asc">{{ 'price' | t }}: {{ 'low' | t }} → {{ 'high' | t }}</option>
+                <option value="{{ store.url }}/products?sort=price_desc">{{ 'price' | t }}: {{ 'high' | t }} → {{ 'low' | t }}</option>
+                <option value="{{ store.url }}/products?sort=popular">{{ 'best_sellers' | t }}</option>
+            </select>
+        </div>
+
+        {% if products is not empty %}
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                {% for product in products %}
+                    {% include "pages.partials.product.card" with {product: product} %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="anaqa-empty-state">
+                <div class="empty-icon">
+                    <span class="sicon-box"></span>
+                </div>
+                <h3>{{ 'no_results' | t }}</h3>
+                <a href="{{ store.url }}/products" class="anaqa-btn text-sm">{{ 'continue_shopping' | t }}</a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script defer src="{{ 'product.js' | asset }}"></script>
+{% endblock %}

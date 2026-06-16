@@ -1,0 +1,567 @@
+{
+    "name": {
+        "ar": "أناقة",
+        "en": "Anaqa"
+    },
+    "description": {
+        "ar": "متجر أزياء عصري وأنيق - قالب أناقة للأزياء والموضة",
+        "en": "Modern & elegant fashion ecommerce theme - Anaqa for fashion & clothing stores"
+    },
+    "repository": "https://github.com/mahmoudhassanx174/anaqa-theme",
+    "author_email": "mahmoudhassanx174@gmail.com",
+    "features": [
+        "mega-menu",
+        "fonts",
+        "color",
+        "breadcrumb",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-products-slider",
+        "component-photos-slider",
+        "component-parallax-background",
+        "component-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube",
+        "component-latest-products",
+        "menu-images",
+        "filters"
+    ],
+    "settings": [
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-colors",
+            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> ألوان القالب</h6></div>",
+            "variant": "h6"
+        },
+        {
+            "type": "string",
+            "id": "primary_color",
+            "label": "اللون الأساسي",
+            "format": "color",
+            "value": "#1a1a1a"
+        },
+        {
+            "type": "string",
+            "id": "accent_color",
+            "label": "لون التمييز (ذهبي/وردي)",
+            "format": "color",
+            "value": "#C9A96E"
+        },
+        {
+            "type": "string",
+            "id": "button_color",
+            "label": "لون الأزرار",
+            "format": "color",
+            "value": "#1a1a1a"
+        },
+        {
+            "type": "string",
+            "id": "button_text_color",
+            "label": "لون نص الأزرار",
+            "format": "color",
+            "value": "#ffffff"
+        },
+        {
+            "type": "string",
+            "id": "background_color",
+            "label": "لون الخلفية",
+            "format": "color",
+            "value": "#faf8f5"
+        },
+        {
+            "type": "string",
+            "id": "text_color",
+            "label": "لون النصوص",
+            "format": "color",
+            "value": "#2d2d2d"
+        },
+        {
+            "type": "static",
+            "format": "line",
+            "id": "static-line1"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-header",
+            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات الرأس</h6></div>",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "id": "header_is_sticky",
+            "label": "تثبيت القائمة الرئيسية",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "id": "show_announcement_bar",
+            "label": "إظهار شريط الإعلانات العلوي",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "string",
+            "id": "announcement_text",
+            "label": "نص الإعلان العلوي",
+            "format": "text",
+            "value": "توصيل مجاني للطلبات فوق 299 ريال",
+            "multilanguage": true
+        },
+        {
+            "type": "boolean",
+            "id": "topnav_is_dark",
+            "label": "شريط علوي داكن",
+            "format": "switch",
+            "value": true,
+            "selected": false
+        },
+        {
+            "type": "static",
+            "format": "line",
+            "id": "static-line2"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-hero",
+            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات القسم الرئيسي (Hero)</h6></div>",
+            "variant": "h6"
+        },
+        {
+            "type": "string",
+            "id": "hero_image",
+            "label": "صورة الخلفية الرئيسية",
+            "format": "image",
+            "value": ""
+        },
+        {
+            "type": "string",
+            "id": "hero_title",
+            "label": "العنوان الرئيسي",
+            "format": "text",
+            "value": "مجموعة الأزياء الجديدة",
+            "multilanguage": true
+        },
+        {
+            "type": "string",
+            "id": "hero_subtitle",
+            "label": "النص الفرعي",
+            "format": "textarea",
+            "value": "اكتشفي أحدث صيحات الموضة مع تشكيلتنا الحصرية",
+            "multilanguage": true
+        },
+        {
+            "type": "string",
+            "id": "hero_button_text",
+            "label": "نص الزر",
+            "format": "text",
+            "value": "تسوق الآن",
+            "multilanguage": true
+        },
+        {
+            "type": "string",
+            "id": "hero_button_link",
+            "label": "رابط الزر",
+            "format": "text",
+            "value": "products"
+        },
+        {
+            "type": "boolean",
+            "id": "hero_show_text",
+            "label": "إظهار النصوص على الصورة",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "static",
+            "format": "line",
+            "id": "static-line3"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-footer",
+            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات التذييل</h6></div>",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "id": "footer_is_dark",
+            "label": "تذييل داكن",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "string",
+            "id": "footer_description",
+            "label": "وصف المتجر في التذييل",
+            "format": "textarea",
+            "value": "أناقة - وجهتك الأولى للأزياء العصرية. نقدم تشكيلات مميزة من الملابس والإكسسوارات",
+            "multilanguage": true
+        },
+        {
+            "type": "string",
+            "id": "whatsapp_number",
+            "label": "رقم واتساب",
+            "format": "text",
+            "value": "01142242076"
+        },
+        {
+            "type": "string",
+            "id": "instagram_url",
+            "label": "رابط انستغرام",
+            "format": "text",
+            "value": ""
+        },
+        {
+            "type": "string",
+            "id": "snapchat_url",
+            "label": "رابط سناب شات",
+            "format": "text",
+            "value": ""
+        },
+        {
+            "type": "string",
+            "id": "twitter_url",
+            "label": "رابط تويتر",
+            "format": "text",
+            "value": ""
+        },
+        {
+            "type": "string",
+            "id": "facebook_url",
+            "label": "رابط فيسبوك",
+            "format": "text",
+            "value": ""
+        },
+        {
+            "type": "string",
+            "id": "tiktok_url",
+            "label": "رابط تيك توك",
+            "format": "text",
+            "value": ""
+        },
+        {
+            "type": "static",
+            "format": "line",
+            "id": "static-line4"
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "static-product",
+            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات صفحة المنتج</h6></div>",
+            "variant": "h6"
+        },
+        {
+            "type": "boolean",
+            "id": "product_show_breadcrumbs",
+            "label": "إظهار مسار التنقل",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "id": "enable_add_product_toast",
+            "label": "تفعيل إشعار الإضافة للسلة",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "id": "sticky_add_to_cart",
+            "label": "تثبيت زر الإضافة أسفل الجوال",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "id": "show_tags",
+            "label": "إظهار الوسوم",
+            "format": "switch",
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "string",
+            "id": "placeholder",
+            "format": "hidden",
+            "value": "images/placeholder.png"
+        }
+    ],
+    "components": [
+        {
+            "key": "anaqa-hero",
+            "title": {
+                "en": "Fashion Hero Banner",
+                "ar": "بانر رئيسي للأزياء"
+            },
+            "icon": "sicon-image-carousel",
+            "path": "home.hero-banner",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "value": "",
+                    "label": "صورة الخلفية",
+                    "id": "background",
+                    "format": "image",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "",
+                    "format": "text"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "النص الفرعي",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "format": "textarea"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر",
+                    "multilanguage": true,
+                    "id": "button_text",
+                    "value": "تسوق الآن",
+                    "format": "text"
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر",
+                    "id": "button_link",
+                    "format": "variable-list",
+                    "source": "custom",
+                    "sources": [
+                        {"label": "منتجات", "key": "products", "value": "products"},
+                        {"label": "تصنيف", "key": "categories", "value": "categories"},
+                        {"label": "تخفيضات", "key": "offers_link", "value": "offers_link"},
+                        {"label": "رابط خارجي", "key": "custom", "value": "custom"}
+                    ]
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-toggle-off",
+                    "label": "إظهار النص",
+                    "id": "show_text",
+                    "format": "switch",
+                    "value": true,
+                    "selected": true
+                },
+                {
+                    "type": "items",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "label": "محاذاة النص",
+                    "id": "alignment",
+                    "format": "dropdown-list",
+                    "selected": [{"label": "اليمين", "value": "right", "key": "right"}],
+                    "options": [
+                        {"label": "اليمين", "value": "right", "key": "right"},
+                        {"label": "الوسط", "value": "center", "key": "center"},
+                        {"label": "اليسار", "value": "left", "key": "left"}
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "anaqa-categories",
+            "title": {
+                "en": "Fashion Categories",
+                "ar": "تصنيفات الأزياء"
+            },
+            "icon": "sicon-layout-grid-rearrange",
+            "path": "home.fashion-categories",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "عنوان القسم",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "تصنيفات الأزياء",
+                    "format": "text"
+                },
+                {
+                    "id": "categories",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "اختر التصنيفات",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "categories",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": true
+                }
+            ]
+        },
+        {
+            "key": "anaqa-benefits",
+            "title": {
+                "en": "Store Benefits",
+                "ar": "مميزات المتجر"
+            },
+            "icon": "sicon-award-ribbon",
+            "path": "home.store-benefits",
+            "fields": [
+                {
+                    "type": "collection",
+                    "format": "collection",
+                    "id": "benefits",
+                    "label": "المميزات",
+                    "item_label": "ميزة",
+                    "value": [
+                        {
+                            "benefits.icon": "sicon-truck",
+                            "benefits.title": "شحن سريع",
+                            "benefits.description": "توصيل خلال 3-5 أيام عمل"
+                        },
+                        {
+                            "benefits.icon": "sicon-shield-check",
+                            "benefits.title": "دفع آمن",
+                            "benefits.description": "طرق دفع موثوقة ومشغرة"
+                        },
+                        {
+                            "benefits.icon": "sicon-refresh",
+                            "benefits.title": "إرجاع سهل",
+                            "benefits.description": "إرجاع وتبديل خلال 14 يوم"
+                        },
+                        {
+                            "benefits.icon": "sicon-chat-bubbles",
+                            "benefits.title": "دعم واتساب",
+                            "benefits.description": "تواصل معنا عبر الواتساب"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "benefits.icon",
+                            "type": "string",
+                            "format": "icon",
+                            "label": "الأيقونة"
+                        },
+                        {
+                            "id": "benefits.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "benefits.description",
+                            "type": "string",
+                            "format": "text",
+                            "label": "الوصف",
+                            "multilanguage": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "anaqa-instagram",
+            "title": {
+                "en": "Instagram / Lifestyle",
+                "ar": "قسم إنستغرام"
+            },
+            "icon": "sicon-image",
+            "path": "home.instagram-section",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "عنوان القسم",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "تابعنا على إنستغرام",
+                    "format": "text"
+                },
+                {
+                    "id": "images",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "الصور",
+                    "item_label": "صورة",
+                    "minLength": 1,
+                    "maxLength": 6,
+                    "value": [],
+                    "fields": [
+                        {
+                            "id": "images.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة",
+                            "required": true
+                        },
+                        {
+                            "id": "images.link",
+                            "type": "string",
+                            "format": "text",
+                            "label": "الرابط (اختياري)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "anaqa-newsletter",
+            "title": {
+                "en": "Newsletter / CTA Section",
+                "ar": "قسم النشرة البريدية"
+            },
+            "icon": "sicon-mail",
+            "path": "home.newsletter-section",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "اشتركي في النشرة البريدية",
+                    "format": "text"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": "كوني أول من يعرف عن أحدث التشكيلات والعروض الحصرية",
+                    "format": "textarea"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر",
+                    "multilanguage": true,
+                    "id": "button_text",
+                    "value": "اشتراك",
+                    "format": "text"
+                }
+            ]
+        }
+    ]
+}

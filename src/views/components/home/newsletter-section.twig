@@ -1,0 +1,20 @@
+{#
+  Newsletter / CTA Section Component
+  Fields: title, description, button_text
+#}
+<section class="anaqa-newsletter-section">
+    <div class="container mx-auto px-4 text-center">
+        <div class="anaqa-section-title section-title">
+            <h2 class="text-white">{{ component.title ?: 'newsletter_section_title' | t }}</h2>
+        </div>
+        {% if component.description %}
+            <p class="text-white/70 text-sm mb-8 max-w-lg mx-auto">
+                {{ component.description }}
+            </p>
+        {% endif %}
+        <form class="anaqa-newsletter-form" action="{{ store.api }}/newsletter/subscribe" method="POST">
+            <input type="email" name="email" placeholder="{{ 'newsletter_placeholder' | t }}" required>
+            <button type="submit">{{ component.button_text ?: 'newsletter_section_button' | t }}</button>
+        </form>
+    </div>
+</section>

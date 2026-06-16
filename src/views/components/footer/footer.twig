@@ -1,0 +1,87 @@
+<footer class="anaqa-footer {{ theme.settings.get('footer_is_dark', true) ? '' : 'anaqa-footer-light' }} pt-12 pb-6">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+
+            <div>
+                <h4>{{ store.name }}</h4>
+                <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                    {{ theme.settings.get('footer_description', 'footer_description' | t) }}
+                </p>
+                <div class="flex gap-3 mt-4">
+                    {% set socials = {
+                        'instagram': theme.settings.get('instagram_url', ''),
+                        'snapchat': theme.settings.get('snapchat_url', ''),
+                        'twitter': theme.settings.get('twitter_url', ''),
+                        'facebook': theme.settings.get('facebook_url', ''),
+                        'tiktok': theme.settings.get('tiktok_url', '')
+                    } %}
+                    {% for name, url in socials %}
+                        {% if url %}
+                            <a href="{{ url }}" target="_blank" rel="noopener" class="anaqa-social-link" aria-label="{{ name | t }}">
+                                <span class="sicon-{{ name }} text-sm"></span>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div>
+                <h4>{{ 'quick_links' | t }}</h4>
+                <ul class="space-y-3">
+                    <li><a href="{{ store.url }}/products">{{ 'products' | t }}</a></li>
+                    <li><a href="{{ store.url }}/categories">{{ 'categories' | t }}</a></li>
+                    <li><a href="{{ store.url }}/offers">{{ 'sale' | t }}</a></li>
+                    <li><a href="{{ store.url }}/brands">{{ 'brand' | t }}</a></li>
+                    <li><a href="{{ store.url }}/blog">{{ 'blog' | t }}</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>{{ 'customer_service' | t }}</h4>
+                <ul class="space-y-3">
+                    <li><a href="{{ store.url }}/page/about-us">{{ 'about_us' | t }}</a></li>
+                    <li><a href="{{ store.url }}/page/privacy-policy">{{ 'privacy_policy' | t }}</a></li>
+                    <li><a href="{{ store.url }}/page/terms-conditions">{{ 'terms_conditions' | t }}</a></li>
+                    <li><a href="{{ store.url }}/page/return-policy">{{ 'return_policy' | t }}</a></li>
+                    <li><a href="{{ store.url }}/page/shipping-info">{{ 'shipping_info' | t }}</a></li>
+                    <li><a href="{{ store.url }}/page/faq">{{ 'faq' | t }}</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>{{ 'contact_us' | t }}</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-2 text-sm text-gray-400">
+                        <span class="sicon-mail text-accent"></span>
+                        <a href="mailto:{{ theme.settings.get('support_email', 'mahmoudhassanx174@gmail.com') }}" class="hover:text-white transition-colors">mahmoudhassanx174@gmail.com</a>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm text-gray-400">
+                        <span class="sicon-phone text-accent"></span>
+                        <a href="tel:{{ theme.settings.get('whatsapp_number', '01142242076') }}" class="hover:text-white transition-colors ltr inline-block">01142242076</a>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm text-gray-400">
+                        <span class="sicon-message text-accent"></span>
+                        <a href="https://wa.me/{{ theme.settings.get('whatsapp_number', '01142242076') }}" target="_blank" class="hover:text-white transition-colors">WhatsApp</a>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm text-gray-400">
+                        <span class="sicon-envelope text-accent"></span>
+                        <a href="mailto:ahmedaboyouniscodee@gmail.com" class="hover:text-white transition-colors">ahmedaboyouniscodee@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-6 mt-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-500">
+                    &copy; {{ "now"|date("Y") }} {{ store.name }}. {{ 'all_rights_reserved' | t }}
+                </p>
+                <div class="flex items-center gap-3 text-gray-500">
+                    <span class="sicon-visa text-xl"></span>
+                    <span class="sicon-mastercard text-xl"></span>
+                    <span class="sicon-mada text-xl"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

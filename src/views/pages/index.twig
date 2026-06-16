@@ -1,0 +1,36 @@
+{% extends "layouts.master" %}
+
+{% block content %}
+
+    {% set heroBg = theme.settings.get('hero_image', '') %}
+    {% if heroBg %}
+        <section class="anaqa-hero">
+            <img src="{{ heroBg }}" alt="{{ theme.settings.get('hero_title', 'hero_title' | t) }}" loading="eager">
+            {% if theme.settings.get('hero_show_text', true) %}
+                <div class="anaqa-hero-overlay">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-lg">
+                            <h1 class="text-3xl md:text-5xl font-light text-white mb-4 leading-tight">
+                                {{ theme.settings.get('hero_title', 'hero_title' | t) }}
+                            </h1>
+                            {% set heroSub = theme.settings.get('hero_subtitle', '') %}
+                            {% if heroSub %}
+                                <p class="text-white/80 text-sm md:text-base mb-8 max-w-md">{{ heroSub }}</p>
+                            {% endif %}
+                            <a href="{{ theme.settings.get('hero_button_link', store.url ~ '/products') }}" class="anaqa-btn-accent">
+                                {{ theme.settings.get('hero_button_text', 'hero_button' | t) }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </section>
+    {% endif %}
+
+    {% component home %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+{% endblock %}

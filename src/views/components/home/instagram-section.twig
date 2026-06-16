@@ -1,0 +1,31 @@
+{#
+  Instagram / Lifestyle Section Component
+  Fields: title, images (collection of image, link)
+#}
+{% if component.images is not empty %}
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="anaqa-section-title">
+                <h2>{{ component.title ?: 'instagram_section_title' | t }}</h2>
+            </div>
+        </div>
+        <div class="anaqa-instagram-grid">
+            {% for item in component.images %}
+                {% if item.link %}
+                    <a href="{{ item.link }}" target="_blank" rel="noopener" class="anaqa-instagram-item">
+                {% else %}
+                    <div class="anaqa-instagram-item">
+                {% endif %}
+                    <img src="{{ item.image }}" alt="Instagram" loading="lazy">
+                    <div class="anaqa-instagram-overlay">
+                        <span class="sicon-instagram text-white text-2xl"></span>
+                    </div>
+                {% if item.link %}
+                    </a>
+                {% else %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
