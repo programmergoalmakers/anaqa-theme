@@ -33,7 +33,7 @@
             "type": "static",
             "format": "title",
             "id": "static-colors",
-            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> ألوان القالب</h6></div>",
+            "value": "<div class='rounded-lg' ><h6 > ألوان القالب</h6></div>",
             "variant": "h6"
         },
         {
@@ -87,7 +87,7 @@
             "type": "static",
             "format": "title",
             "id": "static-header",
-            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات الرأس</h6></div>",
+            "value": "<div class='rounded-lg' ><h6 > إعدادات الرأس</h6></div>",
             "variant": "h6"
         },
         {
@@ -131,7 +131,7 @@
             "type": "static",
             "format": "title",
             "id": "static-hero",
-            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات القسم الرئيسي (Hero)</h6></div>",
+            "value": "<div class='rounded-lg' ><h6 > إعدادات القسم الرئيسي (Hero)</h6></div>",
             "variant": "h6"
         },
         {
@@ -139,7 +139,7 @@
             "id": "hero_image",
             "label": "صورة الخلفية الرئيسية",
             "format": "image",
-            "value": ""
+            "value": null
         },
         {
             "type": "string",
@@ -189,7 +189,7 @@
             "type": "static",
             "format": "title",
             "id": "static-footer",
-            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات التذييل</h6></div>",
+            "value": "<div class='rounded-lg' ><h6 > إعدادات التذييل</h6></div>",
             "variant": "h6"
         },
         {
@@ -220,35 +220,35 @@
             "id": "instagram_url",
             "label": "رابط انستغرام",
             "format": "text",
-            "value": ""
+            "value": null
         },
         {
             "type": "string",
             "id": "snapchat_url",
             "label": "رابط سناب شات",
             "format": "text",
-            "value": ""
+            "value": null
         },
         {
             "type": "string",
             "id": "twitter_url",
             "label": "رابط تويتر",
             "format": "text",
-            "value": ""
+            "value": null
         },
         {
             "type": "string",
             "id": "facebook_url",
             "label": "رابط فيسبوك",
             "format": "text",
-            "value": ""
+            "value": null
         },
         {
             "type": "string",
             "id": "tiktok_url",
             "label": "رابط تيك توك",
             "format": "text",
-            "value": ""
+            "value": null
         },
         {
             "type": "static",
@@ -259,7 +259,7 @@
             "type": "static",
             "format": "title",
             "id": "static-product",
-            "value": "<div class='rounded-lg' style='background-color: #1a1a1a; display: flex; justify-content: center; align-items: center;padding: 15px;margin-bottom: 20px; flex-direction: column;gap: 15px;'><h6 style='color: #C9A96E;font-size: 15px; font-weight: bold;'> إعدادات صفحة المنتج</h6></div>",
+            "value": "<div class='rounded-lg' ><h6 > إعدادات صفحة المنتج</h6></div>",
             "variant": "h6"
         },
         {
